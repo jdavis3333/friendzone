@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
         <Switch>
-          <Route exact path={["/", "/landing"]}>
+          {/* <Route exact path={["/", "/landing"]}>
             <Landing />
           </Route>
           <Route exact path="/signin">
@@ -24,13 +24,13 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home />
-          </Route>
+          </Route> */}
           <Route exact path="/chat">
             <Chat />
           </Route>
-          <Route exact path="/friends">
+          {/* <Route exact path="/friends">
             <Friends />
-          </Route>
+          </Route> */}
           <Route>
             <NoMatch />
           </Route>
