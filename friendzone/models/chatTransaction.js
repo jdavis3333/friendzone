@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes) {
         }
     })
     ChatTransaction.associate = function (models) {
-        ChatTransaction.belongsTo(models.chat, { foreignKey: {allowNull:false}})
+        ChatTransaction.belongsTo(models.Chat, { foreignKey: {allowNull:false}})
     }
-    return Chat;
+    return ChatTransaction;
 }

@@ -4,16 +4,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Chat from "./pages/Chat";
 import Landing from "./pages/Landing";
 import NoMatch from "./pages/NoMatch";
-import Signin from "./components/Signin";
-import Signup from "./components/Signup";
-import Home from "./components/Home";
-import Friends from "./components/Friends";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
+import Home from "./pages/Home";
+import Friends from "./pages/Friends";
 
 function App() {
   return (
     <Router>
-      <div>
-        <Nav />
         <Switch>
           <Route exact path={["/", "/landing"]}>
             <Landing />
@@ -37,7 +35,6 @@ function App() {
             <NoMatch />
           </Route>
         </Switch>
-      </div>
     </Router>
   );
 }
