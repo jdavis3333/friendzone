@@ -1,29 +1,40 @@
 import React from 'react';
 import './App.css';
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import Books from "./pages/Books";
-// import Detail from "./pages/Detail";
-// import NoMatch from "./pages/NoMatch";
-// import Nav from "./components/Nav";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Chat from "./pages/Chat";
+import Landing from "./pages/Landing";
+import NoMatch from "./pages/NoMatch";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
+import Home from "./pages/Home";
+import Friends from "./pages/Friends";
 
 function App() {
   return (
     <Router>
-      <div>
-        <Nav />
         <Switch>
-          <Route exact path={["/", "/books"]}>
-            <Books />
+          <Route exact path={["/", "/landing"]}>
+            <Landing />
           </Route>
-          <Route exact path="/books/:id">
-            <Detail />
+          <Route exact path="/signin">
+            <Signin />
+          </Route>
+          <Route exact path="/signup">
+            <Signup />
+          </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+          <Route exact path="/chat">
+            <Chat />
+          </Route>
+          <Route exact path="/friends">
+            <Friends />
           </Route>
           <Route>
             <NoMatch />
           </Route>
         </Switch>
-      </div>
     </Router>
   );
 }
