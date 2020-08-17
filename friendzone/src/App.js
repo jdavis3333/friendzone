@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Chat from "./pages/Chat";
@@ -8,15 +8,20 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import Friends from "./pages/Friends";
+import Nav from "./components/Navbar"
+import { render } from 'react-dom';
 
-function App() {
+class App extends Component  {
+  render() {
   return (
     <Router>
+      <div>
+        <Nav />
         <Switch>
-          {/* <Route exact path={["/", "/landing"]}>
+          <Route exact path={["/", "/landing"]}>
             <Landing />
           </Route>
-          <Route exact path="/signin">
+          {/* <Route exact path="/signin">
             <Signin />
           </Route>
           <Route exact path="/signup">
@@ -24,19 +29,18 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home />
-          </Route> */}
+          </Route>
           <Route exact path="/chat">
             <Chat />
           </Route>
-          {/* <Route exact path="/friends">
-            <Friends />
-          </Route> */}
           <Route>
             <NoMatch />
-          </Route>
+          </Route> */}
         </Switch>
+        </div>
     </Router>
   );
 }
+};
 
 export default App;
