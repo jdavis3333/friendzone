@@ -1,6 +1,6 @@
 var express = require('express')
 const session = require ("express-session");
-
+const passport = require("../friendzone/config/passport");
 var db = require('./models')
 const routes = require("./routes");
 var PORT = process.env.PORT || 3000;
