@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const apiRoutes = require("./api");
+const apiRoutes = require("./chat");
 
 // Post routes
 router.use("/chat", apiRoutes);
